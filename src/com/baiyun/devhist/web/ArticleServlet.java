@@ -53,8 +53,6 @@ public class ArticleServlet extends BaseServlet {
         Integer currPage = Integer.valueOf(request.getParameter("currPage"));
         String cid = request.getParameter("cid");
         String keyWord = request.getParameter("keyWord");
-        System.out.println("cid = " + cid);
-        System.out.println("keyWord = " + keyWord);
         PageBean<Article> pageData = null;
         if (!StringUtils.isBlank(cid) && !StringUtils.isBlank(keyWord)) {
             pageData = articleService.getPageData(currPage, 8, Integer.valueOf(cid.substring(0, 4)), keyWord);
