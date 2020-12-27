@@ -4,16 +4,16 @@
 
 ## 食用教程
 
-#### 1.	需要先部署python項目：BaiYunDevHist.py
+#### 1.	需要先部署python項目：[BaiYunDevHist.py](https://github.com/HuaiAnGG/BaiyunUniversityDevHistory/blob/master/resource/baiyun.py)
 
-##### 需要依赖：
+##### [BaiYunDevHist.py](https://github.com/HuaiAnGG/BaiyunUniversityDevHistory/blob/master/resource/baiyun.py) 需要依赖：
 
 - requests	（網絡請求）
 - BeautifulSoup4 或者 beautifulSoup  （xml解析）
 - pymysql  （數據庫連接池）
 ##### 修改 python-mysql 連接池對象
 - db = pymysql.connect( host, username, passowrd, db_name)
-#### 2. 數據庫需要先創建 article、category 兩張表，表結構如下：
+#### 2. 數據庫需要先創建 [article、category 兩張表](https://github.com/HuaiAnGG/BaiyunUniversityDevHistory/blob/master/resource/db_baiyun.sql) ，表結構如下：
 - article：白雲學院大事件數據表，結構如下：
 ```sql
   -- ----------------------------
@@ -28,9 +28,12 @@
                               `article_cid` varchar(50) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
                               PRIMARY KEY (`article_id`) USING BTREE
   ) ENGINE = InnoDB AUTO_INCREMENT = 172 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
-  b)	category：大事件年份分類表，結構如下：
-  
-  -- Table structure for category
+  )	
+```
+- category：大事件年份分類表，結構如下：
+ 
+```sql
+-- Table structure for category
   -- ----------------------------
   DROP TABLE IF EXISTS `category`;
   CREATE TABLE `category`  (
@@ -42,6 +45,7 @@
                                PRIMARY KEY (`id`) USING BTREE
   ) ENGINE = InnoDB CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
 ```
+  
 
   
 #### 3. 前端頁面訪問地址：
