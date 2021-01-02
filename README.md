@@ -1,4 +1,4 @@
-"# BaiyunUniversityDevHistory" 
+# BaiyunUniversityDevHistory
 
 > Python 爬虫获取[广东白云学院大事件](http://www.baiyunu.edu.cn/html/cn/2019dsj/) 通过网页展示，后端使用 Servlet + JSP
 
